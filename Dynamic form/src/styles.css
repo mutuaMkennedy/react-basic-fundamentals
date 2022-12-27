@@ -1,0 +1,73 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.App .LoginForm {
+  border: 1px solid #f7f7f7;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.LoginForm h3 {
+  font-size: 25px;
+  text-align: start;
+}
+
+.LoginForm > p {
+  font-size: 13px;
+  text-align: start;
+}
+
+.LoginForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.LoginForm form input {
+  width: 100%;
+  padding: 16px 10px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.LoginForm form label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.LoginForm form button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 50px;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.error,
+.success {
+  margin-top: 10px;
+  font-size: 13px;
+  padding: 10px 5px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
