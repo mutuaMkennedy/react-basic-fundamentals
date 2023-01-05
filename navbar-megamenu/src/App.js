@@ -10,28 +10,62 @@ const Navbar = () => {
             <div className="Logo">
               <img src={Logo} alt="logo" />
             </div>
-            <ul>
-              <li>
+            <ul className="menu">
+              <li className="menu-item">
                 <button type="button">Products</button>
                 <div className="dropdown">
-                  <div className="dropdown-wrapper">
-                    <span>Products</span>
-                    <ul>
-                      <li><iconify-icon icon="logos:salesforce"></iconify-icon>Salesforce</li>
-                      <li><iconify-icon icon="logos:slack-icon"></iconify-icon>Slack</li>
-                      <li><iconify-icon icon="logos:jira"></iconify-icon>Jira</li>
-                      <li><iconify-icon icon="vscode-icons:file-type-reactjs"></iconify-icon>React</li>
-                    </ul>
+                  <div className="dropdown-row">
+                    <div className="dropdown-wrapper">
+                      <span>Products</span>
+                      <ul>
+                        <li>
+                          <span>
+                            <iconify-icon
+                              icon="logos:salesforce"
+                              width="24"
+                            ></iconify-icon>
+                          </span>
+                          Salesforce
+                        </li>
+                        <li>
+                          <span>
+                            <iconify-icon
+                              icon="logos:slack-icon"
+                              width="24"
+                            ></iconify-icon>
+                          </span>
+                          Slack
+                        </li>
+                        <li>
+                          <span>
+                            <iconify-icon
+                              icon="logos:jira"
+                              width="24"
+                            ></iconify-icon>
+                          </span>
+                          Jira
+                        </li>
+                        <li>
+                          <span>
+                            <iconify-icon
+                              icon="vscode-icons:file-type-reactjs"
+                              width="24"
+                            ></iconify-icon>
+                          </span>
+                          React
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </li>
-              <li>
+              <li className="menu-item">
                 <button type="button">Industries</button>
               </li>
-              <li>
+              <li className="menu-item">
                 <button type="button">Learning</button>
               </li>
-              <li>
+              <li className="menu-item">
                 <button type="button">Pricing</button>
               </li>
             </ul>
