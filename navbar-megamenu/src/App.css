@@ -51,12 +51,16 @@
   cursor: pointer;
 }
 
+.row ul.menu li.menu-item button[data-state="block"] {
+  border-bottom: 1px solid blue;
+}
+
 .dropdown {
   position: absolute;
   top: 66px;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 66px);
   background-color: rgb(255 255 255 / 50%);
 }
 
@@ -104,4 +108,12 @@
   padding: 3px;
   box-shadow: 0 0 2px 2px #eee;
   margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
 }
