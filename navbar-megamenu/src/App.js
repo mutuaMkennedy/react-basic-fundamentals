@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Logo from "./assets/peer.png";
+
+const Navbar = () => {
+  return (
+    <header>
+      <nav>
+        <div className="container">
+          <div className="row">
+            <div className="Logo">
+              <img src={Logo} alt="logo" />
+            </div>
+            <ul>
+              <li>
+                <button type="button">Products</button>
+              </li>
+              <li>
+                <button type="button">Industries</button>
+              </li>
+              <li>
+                <button type="button">Learning</button>
+              </li>
+              <li>
+                <button type="button">Pricing</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
     </div>
   );
 }
