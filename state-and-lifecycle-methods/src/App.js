@@ -25,7 +25,7 @@ class App extends React.Component {
   };
 
   // Called after render/when component is added to the dom
-  // Usefull to do things that require DOM access
+  // Usefull for side effects E.g. API Calls, Event listenrs, Dom mutation etc
   componentDidMount() {
     console.log("Component mounted");
   }
