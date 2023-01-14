@@ -30,6 +30,12 @@ class App extends React.Component {
     console.log("Component mounted");
   }
 
+  // // Controls whether to re-render the component if props or state changes
+  // // Ussually a perfomance optimisation tool
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return false;
+  // }
+
   render() {
     const increment = this.increment;
     const decrement = this.decrement;
