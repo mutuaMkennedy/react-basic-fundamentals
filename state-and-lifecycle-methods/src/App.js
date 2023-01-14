@@ -24,17 +24,35 @@ class App extends React.Component {
     this.setState({ counter: this.state.counter - 1 });
   };
 
+  // used to copy props to state
+  static getDerivedStateFromProps(props, state) {
+    //  if (props.foo && state.foo != props.foo){
+    //    return{
+    //      foo: props.foo
+    //    }
+    //  }
+    return null;
+  }
+
   // Called after render/when component is added to the dom
-  // Usefull for side effects E.g. API Calls, Event listenrs, Dom mutation etc
+  // Usecase: side effects E.g. API Calls, Event listeners, Dom mutation etc
   componentDidMount() {
     console.log("Component mounted");
   }
 
   // // Controls whether to re-render the component if props or state changes
   // // Ussually a perfomance optimisation tool
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return false;
-  // }
+  // // Only use this when absolutely necessary
+  shouldComponentUpdate(nextProps, nextState) {
+    return true;
+  }
+
+  // Capture information not stored in state
+  // Gets passed to component did update as snapshot
+  // Usecase: Get previous scroll or cursor position so you can restore the earlier view
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    return null;
+  }
 
   render() {
     const increment = this.increment;
@@ -47,6 +65,21 @@ class App extends React.Component {
         <button onClick={decrement}>Decrement</button>
       </>
     );
+  }
+
+  // Called when the component has been updated
+  // Usecase: update the DOM when data from an API is availlable
+  // contd: restore snpshot
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("Component updated");
+    return null;
+  }
+
+  // Gracefully handle any errors in thsis Component
+  // Also used as part of creating error boundaries for use in functional components
+  componentDidCatch(error, info) {
+    // do stuff
+    return null;
   }
 }
 
