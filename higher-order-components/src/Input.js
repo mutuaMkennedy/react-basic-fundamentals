@@ -1,27 +1,16 @@
 import React from "react";
+import withCounter from "./withCounter.js";
 
 class Input extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-    this.increment = this.increment.bind(this);
-  }
-
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
   render() {
-    const { count } = this.state;
-    const increment = this.increment;
+    const { count, increment, placeholder } = this.props;
     return (
       <>
-        <input onKeyUp={increment} />
+        <input onKeyUp={increment} placeholder={placeholder} />
         <div>You pressed your keyboard : {count} times</div>
       </>
     );
   }
 }
 
-export default Input;
+export default withCounter(Input, 10);

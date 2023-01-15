@@ -5,8 +5,8 @@ import Input from "./Input.js";
 function App() {
   return (
     <div className="App">
-      <Button />
-      <Input />
+      <Button value="Click to increment by a factor of 5" />
+      <Input placeholder="Type to increment by a factor 10" />
     </div>
   );
 }
