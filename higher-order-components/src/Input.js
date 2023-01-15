@@ -3,14 +3,14 @@ import withCounter from "./withCounter.js";
 
 class Input extends React.Component {
   render() {
-    const { count, increment } = this.props;
+    const { count, increment, placeholder } = this.props;
     return (
       <>
-        <input onKeyUp={increment} />
+        <input onKeyUp={increment} placeholder={placeholder} />
         <div>You pressed your keyboard : {count} times</div>
       </>
     );
   }
 }
 
-export default withCounter(Input);
+export default withCounter(Input, 10);
