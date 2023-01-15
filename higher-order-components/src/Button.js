@@ -1,20 +1,9 @@
 import React from "react";
+import withCounter from "./withCounter.js";
 
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-    this.increment = this.increment.bind(this);
-  }
-
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
   render() {
-    const { count } = this.state;
-    const increment = this.increment;
+    const { count, increment } = this.props;
     return (
       <>
         <button onClick={increment}>Click to increment</button>
@@ -24,4 +13,4 @@ class Button extends React.Component {
   }
 }
 
-export default Button;
+export default withCounter(Button);
